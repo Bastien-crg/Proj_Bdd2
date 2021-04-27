@@ -31,7 +31,7 @@
 				$result=$cnx->query($requete);
 
 				while($ligne = $result->fetch()){
-					echo ($ligne[0])+"      ";
+					echo ($ligne[0]."<br>");
 
 				}
 		?>

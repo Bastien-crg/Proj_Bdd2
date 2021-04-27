@@ -47,7 +47,7 @@
 
 		$requete = "UPDATE adhérents
 		set teladherent = '".$newnum."'
-		where nummachine = ".$numclient.";";	
+		where numclient = ".$numclient.";";	
 		$result=$cnx->query($requete);
 
 

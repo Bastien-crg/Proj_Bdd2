@@ -1,19 +1,20 @@
 <?php
 	session_start();
-
+	if (isset($_SESSION['login']) && isset($_SESSION['password'])) {
+		echo "
 	
-?>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<?php
 
-		if (isset($_POST["email"]) && isset($_POST["password"])) {
+			<!DOCTYPE html>
+			<html>
+			<head>
+				<title></title>
+			</head>
+			<body>";
+	
+
+		
 			include("connexion.inc.php");
 
 			$requete="\c rdirezdu_db";
@@ -23,6 +24,14 @@
 			$requete="select password from connexion where email = '".$_POST["email"]."';";
 			$result=$cnx->query($requete);
 			
+
+
+
+
+
+
+
+
 			while($ligne = $result->fetch()){
 
 				if ($ligne['password'] == md5($_POST["password"])) {

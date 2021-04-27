@@ -9,7 +9,7 @@
 	     	</div>
 
 	     	<div class="nav_list">
-	     		<a href="plainte.php" class="nav_link">stat</a>
+	     		<a href="plainte.php" class="nav_link">Plainte</a>
 	     	</div>
 
 	     	<div class="nav_list">
@@ -17,7 +17,7 @@
 	     	</div>
 
 	     	<div class="nav_list">
-	     		<a href="#" class="nav_link">Arcade2000</a>
+	     		<a href="index.php" class="nav_link">Arcade2000</a>
 	     	</div>
 	     </nav>
      </header>';
@@ -30,14 +30,14 @@
 	     	</div>
 
 	     	<div class="nav_list">
-	     		<a href="plainte.php" class="nav_link">stat</a>
+	     		<a href="plainte.php" class="nav_link">Plainte</a>
 	     	</div>
 
 	     	<div class="nav_list">
 	     		<a href="formulaire.php" class="nav_link">Connexion</a>
 	     	</div>
 	     	<div class="nav_list">
-	     		<a href="#" class="nav_link">Arcade2000</a>
+	     		<a href="index.php" class="nav_link">Arcade2000</a>
 	     	</div>
 	     </nav>
      </header>';

@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,6 +9,12 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+	<?php
+     include("header.inc.php");
+     ?>
+
+
 	<section>
 		<div class="container">
 			<form action="mailto:#" method="POST">

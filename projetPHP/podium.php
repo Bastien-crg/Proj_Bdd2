@@ -1,3 +1,7 @@
+<?php
+  session_start();
+ 
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -7,39 +11,33 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-      <ul class="menu">
-              <li>
-                <a href="index.php" class="actif">index</a>
-              </li>
-              <li>
-                <a href="stat.php">stat</a>
-              </li>
-        </ul>
-    </header>
+      <?php
+        include("header.inc.php");
 
-    <div class="title">
-        Voici les top player du moment: 
-    </div>
+        include("connexion.inc.php");
+        $requete="\c rdirezdu_db";
+        $result=$cnx->query($requete);
+        $requete="set search_path to projet ;"; 
+        $result=$cnx->query($requete);
+        $requete = "select pseudoadherent, nomjeu from parties join adhérents on parties.numclient = adhérents.numclient join jeux on parties.numjeu = jeux.numjeu where parties.numclient in (select numclient from parties as p1 where score_partie >= all (select score_partie from parties as p2 where p1.numjeu = p2.numjeu))and parties.numjeu in (select numjeu from parties as p1 where score_partie >= all (select score_partie from parties as p2 where p1.numjeu = p2.numjeu));";  
+        $result=$cnx->query($requete);
 
-    <div class="container">
-       TOP 1: nomPerso<br> <!-- mettre le nom du jeu -->
-    </div>
+       
 
-    <div class="container">
-       TOP 2: nomPerso<br>
-    </div>
+      
 
-    <div class="container">
-       TOP 3: nomPerso<br> 
-    </div>
+
+         while($ligne = $result->fetch()){
+          echo($ligne["nomjeu"]." : ".$ligne["pseudoadherent"]."<br><br>");
+          
+          
+          
+        }
+
+      ?>
 
     <footer>
-      <ul class="bot">
-              <li>
-                <a href="index.html" class="actif">plainte</a>
-              </li>
-        </ul>
+      
     </footer>
 
     </body>
