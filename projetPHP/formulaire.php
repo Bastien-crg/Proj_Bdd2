@@ -27,12 +27,12 @@
     <p>Si vous ne poussédez pas de compte</p>
 
 
-    <form class="formulaire" method="POST" action="#">
+    <form class="formulaire" method="POST" action="inscription.php">
 
 
         <div class="form_group">
-                <label for="speudo">Speudo</label>
-                <input type="text" id="speudo" name="speudo">                    
+                <label for="speudo">Pseudo</label>
+                <input type="text" id="pseudo" name="pseudo">                    
         </div>
 
         <div class="form_group">
@@ -52,8 +52,10 @@
 
         <div class="form_group">
             <label for="mdp">MDP</label>
-            <input name="message" id="message" cols="30" rows="10"></input>                 
+            <input name="mdp" id="mdp" cols="30" rows="10"></input>                 
         </div>
+
+
 
         <button type="submit">inscription</button>
     </form>   
