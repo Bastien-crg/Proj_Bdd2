@@ -26,16 +26,18 @@
 			while($ligne = $result->fetch()){
 				
 				if ($ligne['password'] == md5($_POST["password"])) {
-					echo "zoulouuuuuuuu";
+					
 					$_SESSION['login'] = $_POST['email'];
 					$_SESSION['password'] = $_POST['password'];
 					header('location: https://etudiant.u-pem.fr/~bcorgnac/config_compte.php');
 				}else {
 					echo "mot de passe ou email incorrecte";
-			}
+				}
 		
 		
-		}
+			} 
+		}else {
+			echo "veuillez entrer un mail et un mot de passe";
 		
 	}
 

@@ -36,6 +36,16 @@
         </div>
 
         <div class="form_group">
+                <label for="speudo">Prenom</label>
+                <input type="text" id="prenom" name="prenom">                    
+        </div>
+
+        <div class="form_group">
+                <label for="speudo">Nom</label>
+                <input type="text" id="nom" name="nom">                    
+        </div>
+
+        <div class="form_group">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email">                    
         </div>

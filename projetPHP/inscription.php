@@ -9,7 +9,7 @@
 <body>
     <?php
 
-        if (isset($_POST["email"]) && isset($_POST["pseudo"]) && isset($_POST["mdp"]) && isset($_POST["adresse"]) && isset($_POST["tel"])) {
+        if (isset($_POST["email"]) && isset($_POST["pseudo"]) && isset($_POST["mdp"]) && isset($_POST["adresse"]) && isset($_POST["tel"]) && isset($_POST["nom"]) && isset($_POST["prenom"])) {
             include("connexion.inc.php");
 
             $requete="\c rdirezdu_db";
@@ -17,27 +17,30 @@
             $requete="set search_path to projet ;"; 
             $result=$cnx->query($requete);
 
-            $requete="insert into adhérents values(default,'".$_POST["pseudo"]."','".$_POST["email"]."','".$_POST["tel"]."','".$_POST["adresse"]."',null,null,'".$_POST["password"]."');"; 
-
-
+            $requete="insert into client values ('".$_POST["prenom"]."','".$_POST["nom"]."') returning numclient"; 
             $result=$cnx->query($requete);
 
-            $requete="select password from connexion where email = '".$_POST["email"]."';";
-            $result=$cnx->query($requete);
-            
             while($ligne = $result->fetch()){
 
-                if ($ligne['password'] == md5($_POST["password"])) {
-                    
-                    $_SESSION['login'] = $_POST['email'];
-                    $_SESSION['password'] = $_POST['password'];
-                    header('location: https://etudiant.u-pem.fr/~bcorgnac/config_compte.php');
-                }else {
-                    echo "mot de passe ou email incorrecte";
+                $var = $ligne['numclient'];
             }
+
+            
+
+
+            $requete2="insert into adhérents values('".$_POST["pseudo"]."','".$_POST["email"]."','".$_POST["tel"]."','".$_POST["adresse"]."',null,null,'".$_POST["mdp"]."',".$var.");"; 
+            $result2=$cnx->query($requete2);
+
+            $_SESSION['login'] = $_POST['email'];
+            $_SESSION['password'] = $_POST['mdp'];
+            header('location: https://etudiant.u-pem.fr/~bcorgnac/config_compte.php');
+
+        
+            
+            
         
         
-        }
+        
         
     }
 
