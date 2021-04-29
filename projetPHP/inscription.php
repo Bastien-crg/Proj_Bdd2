@@ -28,7 +28,7 @@
             
 
 
-            $requete2="insert into adhérents values('".$_POST["pseudo"]."','".$_POST["email"]."','".$_POST["tel"]."','".$_POST["adresse"]."',null,null,'".$_POST["mdp"]."',".$var.");"; 
+            $requete2="insert into adhérents values('".$_POST["pseudo"]."','".$_POST["email"]."','".$_POST["tel"]."','".$_POST["adresse"]."',null,null,md5('".$_POST["mdp"]."'),".$var.");"; 
             $result2=$cnx->query($requete2);
 
             $_SESSION['login'] = $_POST['email'];
