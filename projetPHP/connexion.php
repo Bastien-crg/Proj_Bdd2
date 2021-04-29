@@ -25,19 +25,38 @@
 			
 			while($ligne = $result->fetch()){
 				
+				
 				if ($ligne['password'] == md5($_POST["password"])) {
 					
 					$_SESSION['login'] = $_POST['email'];
 					$_SESSION['password'] = $_POST['password'];
 					header('location: https://etudiant.u-pem.fr/~bcorgnac/config_compte.php');
-				}else {
-					echo "mot de passe ou email incorrecte";
+					
 				}
-		
-		
-			} 
+			}
+
+			
+			$requete="select password from employés where email = '".$_POST["email"]."';";
+			$result=$cnx->query($requete);
+
+			while($ligne = $result->fetch()){
+				
+				if ($ligne['password'] == md5($_POST["password"])) {
+					
+					header('location: https://etudiant.u-pem.fr/~bcorgnac/controleAdmin.php');
+				
+
+				}
+
+			}
+
+			echo "mot de passe ou mail incorrecte<br>";
+			echo '<a href="formulaire.php" class="nav_link">Retour</a><br>';
+
+
 		}else {
-			echo "veuillez entrer un mail et un mot de passe";
+			echo "veuillez entrer un mail et un mot de passe<br>";
+			echo '<a href="formulaire.php" class="nav_link">Retour</a><br>';
 		
 	}
 
