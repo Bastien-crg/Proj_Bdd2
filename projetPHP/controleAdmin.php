@@ -7,32 +7,11 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-      <ul class="menu">
-              <li>
-                <a href="horraire.php" class="actif">horaire employer</a>
-              </li>
-              <li>
-                <a href="statusMachine.php">Statue machine</a>
-              </li>
-        </ul>
-    </header>
+        <?php
+        include("header.inc.php");
+        ?>
 
-    <div class="title">
-        Bienvenu nom, Voici les jeu du moment: <!-- mettre le nom de l'admin -->
-    </div>
-
-    <div class="container">
-       TOP 1: nomJeu<br> <!-- mettre le nom du jeu -->
-    </div>
-
-    <div class="container">
-       TOP 2: nomJeu<br>
-    </div>
-
-    <div class="container">
-       TOP 3: nomJeu<br> 
-    </div>
+    
 
     <div class="title">
         Voici les membres fidel: <!-- mettre le nom du joueur -->
