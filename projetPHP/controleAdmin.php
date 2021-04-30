@@ -25,6 +25,71 @@
           echo $ligne['finplanningemployer']."<br>";
 
         }
+        echo "<br><br>";
+
+
+
+
+
+
+
+
+
+
+        $requete="select nummachine,etats_machine from machines order by nummachine;"; 
+        $result=$cnx->query($requete);
+
+        while($ligne = $result->fetch()){
+
+          echo $ligne['nummachine']." ";
+          echo $ligne['etats_machine']."<br>";
+
+        }
+
+
+
+
+
+
+
+
+
+        echo '<form name="saisie" method="GET" action="updateMachine.php">
+              Entrez un numéro de machine : 
+              <select size="1" name="nummachine">
+        ';
+
+        $requete="select nummachine from machines order by nummachine;"; 
+        $result=$cnx->query($requete);
+
+        while($ligne = $result->fetch()){
+
+          echo '<option value='.$ligne['nummachine'].'>'.$ligne['nummachine'].'</option>';
+        }
+          echo '
+          </select>           
+          
+
+          <label>Fonctionnement</label>
+            
+          <select size="1" name="fonctionnement">
+            <option value="En service">En service</option>
+            <option value="Hors servive">Hors servive</option><br>
+          </select>
+
+          <input type="submit" name="OK" value="OK"/></form>
+
+        ';
+
+
+
+
+
+
+
+
+
+
 
         echo "<br><br>";
 
