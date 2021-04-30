@@ -5,6 +5,11 @@
     <link rel="stylesheet" type="text/css" href="styleFormulaire.css">
 </head>
 <body>
+
+
+    <?php
+        include("header.inc.php");
+    ?>
     <!-- connexion -->
     <section>
     <div class="container">
