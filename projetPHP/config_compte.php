@@ -13,6 +13,8 @@
 
 		include("header.inc.php");
 
+		echo '<br><br><a href="deconnexion.php" class="nav_link">Déconnexion</a><br><br>';
+
 		echo '
         <section>
         <div class="container">
