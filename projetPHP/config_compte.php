@@ -23,7 +23,7 @@
 		<form class="formulaire" method="POST" action="update.php">
     		<div class="form_group">
         		<label for="pseudo">Votre nouveau Pseudo</label>
-        		<input class="enter_pseudo" type="text" name="pseudo></input>
+        		<input class="enter_pseudo" type="text" name="pseudo"></input>
     		</div>
 
         	<button type="submit">modifier</button>
@@ -37,7 +37,7 @@
 		<form class="formulaire" method="POST" action="update.php">
     		<div class="form_group">
         		<label for="email">Votre nouveau mail</label>
-        		<input class="enter_email" type="text" name="email></input>
+        		<input class="enter_email" type="text" name="email"></input>
     		</div>
 
         	<button type="submit">modifier</button>
@@ -51,7 +51,7 @@
 		<form class="formulaire" method="POST" action="update.php">
     		<div class="form_group">
         		<label for="tel">Votre nouveau numéro de téléphone</label>
-        		<input class="enter_tel" type="text" name="tel></input>
+        		<input class="enter_tel" type="text" name="tel"></input>
     		</div>
 
         	<button type="submit">modifier</button>
@@ -63,7 +63,7 @@
 		<form class="formulaire" method="POST" action="update.php">
     		<div class="form_group">
         		<label for="mdp">Votre nouveau mdp</label>
-        		<input class="enter_mdp" type="text" name="mdp></input>
+        		<input class="enter_mdp" type="text" name="mdp"></input>
     		</div>
 
         	<button type="submit">modifier</button>
