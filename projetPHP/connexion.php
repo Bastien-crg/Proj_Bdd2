@@ -30,7 +30,7 @@
 					
 					$_SESSION['login'] = $_POST['email'];
 					$_SESSION['password'] = $_POST['password'];
-					header('location: https://etudiant.u-pem.fr/projetPHP/~bcorgnac/config_compte.php');
+					header('location: https://etudiant.u-pem.fr/~bcorgnac/projetPHP/config_compte.php');
 					
 				}
 			}
