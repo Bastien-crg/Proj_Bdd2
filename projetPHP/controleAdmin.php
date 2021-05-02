@@ -16,15 +16,26 @@
         $result=$cnx->query($requete);
         $requete="select nomemploye,prenomemploye, debutplanningemployer, finplanningemployer from employés;"; 
         $result=$cnx->query($requete);
-
+        ?>
+        <br>
+        <h2> Horaires employés </h2><br><br>
+        <div class="cube">
+          
+        <?php
         while($ligne = $result->fetch()){
 
           echo $ligne['nomemploye']."   ";
-          echo $ligne['prenomemploye']."   ";
-          echo $ligne['debutplanningemployer']."   ";
-          echo $ligne['finplanningemployer']."<br>";
 
+          echo $ligne['prenomemploye']."   ";
+
+          echo $ligne['debutplanningemployer']."   ";
+
+          echo $ligne['finplanningemployer']."<br>";
         }
+        ?>
+
+        </div>
+        <?php
         echo "<br><br>";
 
 
@@ -38,27 +49,31 @@
 
         $requete="select nummachine,etats_machine from machines order by nummachine;"; 
         $result=$cnx->query($requete);
-
+        ?>
+        <h2>État des machines</h2>
+        <div class="cube">
+          
+       <?php
         while($ligne = $result->fetch()){
-
           echo $ligne['nummachine']." ";
           echo $ligne['etats_machine']."<br>";
-
         }
+        ?>
+        </div>
+        
 
-
-
-
-
-
-
-
-
-        echo '<form name="saisie" method="GET" action="updateMachine.php">
+        <br><br>
+        <h2> Changer l'etat d'une machine: </h2>
+        <div class="container">
+          
+        
+        <form name="saisie" method="GET" action="updateMachine.php">
+          <div class="form_group">
               Entrez un numéro de machine : 
               <select size="1" name="nummachine">
-        ';
 
+
+        <?php
         $requete="select nummachine from machines order by nummachine;"; 
         $result=$cnx->query($requete);
 
@@ -66,21 +81,20 @@
 
           echo '<option value='.$ligne['nummachine'].'>'.$ligne['nummachine'].'</option>';
         }
-          echo '
-          </select>           
-          
+        ?>
+            </select> 
+            </div>
+            <div class="form_group">          
+            <label>Fonctionnement</label>
+            <select size="1" name="fonctionnement">
+              <option value="En service">En service</option>
+              <option value="Hors servive">Hors servive</option><br>
+            </select>
+          </div>
 
-          <label>Fonctionnement</label>
-            
-          <select size="1" name="fonctionnement">
-            <option value="En service">En service</option>
-            <option value="Hors servive">Hors servive</option><br>
-          </select>
-
-          <input type="submit" name="OK" value="OK"/></form>
-
-        ';
-
+            <button type="submit" name="OK" value="OK">change</button></form>
+          </div>
+          <?php
 
 
 
@@ -93,11 +107,8 @@
 
         echo "<br><br>";
 
-        echo '
-          <div class="title">
-          Voici les membres fidel: <!-- mettre le nom du joueur -->
-          </div>
-        ';
+        echo "
+          <h2> Voici les membres fidel:</h2>";
 
 
 

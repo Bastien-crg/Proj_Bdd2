@@ -13,8 +13,6 @@
 
 		include("header.inc.php");
 
-		echo '<br><br><a href="deconnexion.php" class="nav_link">Déconnexion</a><br><br>';
-
 		echo '
         <section>
         <div class="container">
@@ -30,7 +28,7 @@
 
     	</form>
 
-
+        <br><br>
 
     	<p>Pour changer votre email :</p> 
 
@@ -44,7 +42,7 @@
 
     	</form> 
 
-
+        <br><br>
 
     	<p>Pour changer votre téléphone :</p> 
 
@@ -57,7 +55,7 @@
         	<button type="submit">modifier</button>
 
     	</form> 
-
+        <br><br>
     	<p>Pour changer votre mot de passe :</p> 
 
 		<form class="formulaire" method="POST" action="update.php">

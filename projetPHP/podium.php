@@ -27,14 +27,19 @@
       
 
 
-         while($ligne = $result->fetch()){
-          echo($ligne["nomjeu"]." : ".$ligne["pseudoadherent"]."<br><br>");
-          
-          
-          
-        }
+         
+          ?>
+          <br>
+          <h2>Voici les meilleurs joueurs du moment</h2><br><br>
+          <div class="cube">
+            <?php
+            while($ligne = $result->fetch()){
+            echo($ligne["nomjeu"]." : ".$ligne["pseudoadherent"]."<br><br>"); 
+            }
 
-      ?>
+          ?>
+          </div>
+          
 
     <footer>
       

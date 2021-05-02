@@ -17,6 +17,10 @@
 	     	</div>
 
 	     	<div class="nav_list">
+	     		<a href="deconnexion.php" class="nav_link">Déconnexion</a>
+	     	</div>
+
+	     	<div class="nav_list">
 	     		<a href="index.php" class="nav_link">Arcade2000</a>
 	     	</div>
 	     </nav>
