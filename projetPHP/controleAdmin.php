@@ -20,19 +20,36 @@
         <br>
         <h2> Horaires employés </h2><br><br>
         <div class="cube">
+
+        <table BORDER=1>
+
+
           
         <?php
+
+        echo "<tr>\n";
+        echo "<td>Nom</td>";
+        echo "<td>Prénom</td>";
+        echo "<td>Heure de début</td>";
+        echo "<td>Heure de fin</td>";
+        echo "</tr>\n";
+
         while($ligne = $result->fetch()){
+          echo "<tr>\n";
 
-          echo $ligne['nomemploye']."   ";
+          echo "<td>".$ligne['nomemploye']."</td>";
 
-          echo $ligne['prenomemploye']."   ";
+          echo "<td>".$ligne['prenomemploye']."</td>";
 
-          echo $ligne['debutplanningemployer']."   ";
+          echo "<td>".$ligne['debutplanningemployer']."</td>";
 
-          echo $ligne['finplanningemployer']."<br>";
+          echo "<td>".$ligne['finplanningemployer']."</td>";
+
+          echo "</tr>\n";
         }
         ?>
+
+        </table>
 
         </div>
         <?php
@@ -52,13 +69,24 @@
         ?>
         <h2>État des machines</h2>
         <div class="cube">
+
+          <table BORDER=1>
           
        <?php
+
+        echo "<tr>\n";
+        echo "<td>Numéro de machine</td>";
+        echo "<td>État</td>";
+        echo "</tr>\n";
+
         while($ligne = $result->fetch()){
-          echo $ligne['nummachine']." ";
-          echo $ligne['etats_machine']."<br>";
+          echo "<tr>\n";
+          echo "<td>".$ligne['nummachine']."</td>";
+          echo "<td>".$ligne['etats_machine']."</td>";
+          echo "</tr>\n";
         }
         ?>
+      </table>
         </div>
         
 

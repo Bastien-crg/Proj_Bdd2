@@ -26,7 +26,7 @@
 			
 			
 		}
-		header('location: https://etudiant.u-pem.fr/~bcorgnac/controleAdmin.php');
+		header('location: https://etudiant.u-pem.fr/~bcorgnac/projetPHP/controleAdmin.php');
 
 	?>
 

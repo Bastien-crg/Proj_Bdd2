@@ -8,7 +8,7 @@
 <body>
 	<?php
 		session_destroy();
-		header('location: https://etudiant.u-pem.fr/~bcorgnac/index.php');
+		header('location: https://etudiant.u-pem.fr/~bcorgnac/projetPHP/index.php');
 
 	?>
 

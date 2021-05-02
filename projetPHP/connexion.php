@@ -30,7 +30,7 @@
 					
 					$_SESSION['login'] = $_POST['email'];
 					$_SESSION['password'] = $_POST['password'];
-					header('location: https://etudiant.u-pem.fr/~bcorgnac/config_compte.php');
+					header('location: https://etudiant.u-pem.fr/projetPHP/~bcorgnac/config_compte.php');
 					
 				}
 			}
@@ -43,7 +43,7 @@
 				
 				if ($ligne['password'] == md5($_POST["password"])) {
 					
-					header('location: https://etudiant.u-pem.fr/~bcorgnac/controleAdmin.php');
+					header('location: https://etudiant.u-pem.fr/~bcorgnac/projetPHP/controleAdmin.php');
 				
 
 				}

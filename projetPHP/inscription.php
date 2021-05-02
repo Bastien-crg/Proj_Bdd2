@@ -33,7 +33,7 @@
 
             $_SESSION['login'] = $_POST['email'];
             $_SESSION['password'] = $_POST['mdp'];
-            header('location: https://etudiant.u-pem.fr/~bcorgnac/config_compte.php');
+            header('location: https://etudiant.u-pem.fr/~bcorgnac/projetPHP/config_compte.php');
 
         
             
