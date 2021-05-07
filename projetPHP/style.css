@@ -131,4 +131,10 @@ p {
 	color: #eb6c67;
 }
 
+table {
+	margin: auto;
+}
 
+td{
+	text-align: center;
+}

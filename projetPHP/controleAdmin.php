@@ -19,9 +19,8 @@
         ?>
         <br>
         <h2> Horaires employés </h2><br><br>
-        <div class="cube">
 
-        <table BORDER=1>
+        <table BORDER=1 bgcolor="#e06e6e">
 
 
           
@@ -51,7 +50,6 @@
 
         </table>
 
-        </div>
         <?php
         echo "<br><br>";
 
@@ -68,9 +66,8 @@
         $result=$cnx->query($requete);
         ?>
         <h2>État des machines</h2>
-        <div class="cube">
 
-          <table BORDER=1>
+          <table BORDER=1 bgcolor="#e06e6e">
           
        <?php
 
@@ -87,7 +84,6 @@
         }
         ?>
       </table>
-        </div>
         
 
         <br><br>
