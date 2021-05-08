@@ -21,13 +21,15 @@
             $result=$cnx->query($requete);
             $requete="select * from adhérents where mailadherent = '".$_SESSION['login']."';"; 
             $result=$cnx->query($requete);
+            echo "<div class='adherents'>";
             while($ligne = $result->fetch()){
                 echo $ligne["pseudoadherent"]."  ".$ligne["mailadherent"]."  ".$ligne["teladherent"]."  ".$ligne["password"];
 
             }
+            echo "</div>";
 
 		echo '
-        <section>
+
         <div class="container">
 		<p>Pour changer votre pseudo :</p> 
 
@@ -81,7 +83,6 @@
 
     	</form> 
         </div>
-        </section>
 
 		';	
 

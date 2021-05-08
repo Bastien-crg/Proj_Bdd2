@@ -132,7 +132,7 @@
         echo "<br><br>";
 
         echo "
-          <h2> Voici les membres fidel:</h2>";
+          <h2> Voici les membres fidèles:</h2>";
 
 
 
@@ -145,7 +145,7 @@
           $var ++;
           echo '
           <div class="container">
-            TOP '.$var.': '.$ligne["pseudoadherent"].'<br> <!-- mettre le nom du membre -->
+            <p class="top">TOP '.$var.': '.$ligne["pseudoadherent"].'<p> <!-- mettre le nom du membre -->
           </div>';
         }
 
