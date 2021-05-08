@@ -22,7 +22,7 @@
             $requete="select * from adhérents where mailadherent = '".$_SESSION['login']."';"; 
             $result=$cnx->query($requete);
             while($ligne = $result->fetch()){
-                echo $ligne["pseudoadherent"]."  ".$ligne["mailadherent"]."  ".$ligne["teladherent"]."  ".$ligne["password"];
+                echo $ligne["pseudoadherent"]."  ".$ligne["mailadherent"]."  ".$ligne["teladherent"];
 
             }
 
