@@ -23,15 +23,15 @@
 				$result=$cnx->query($requete);
 				$requete="set search_path to projet ;";	
 				$result=$cnx->query($requete);
-				$requete="select nomjeu from jeux where jeux.numjeu in (
+				$requete="select nomjeu , image from jeux where jeux.numjeu in (
 					select numjeu as nb from parties group by numjeu
 					order by nb desc
 		 			limit 3);";
 				$result=$cnx->query($requete);
 
 				while($ligne = $result->fetch()){
-					echo ($ligne[0]."<br>");
-
+					echo ($ligne['nomjeu']."<br>");
+					echo '<img class="fit-picture" src="'.$ligne['image'].'"><br>';
 				}
 		?>
 	</div>
