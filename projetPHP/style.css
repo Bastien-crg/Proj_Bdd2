@@ -1,12 +1,12 @@
 *{
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
 }
 
 html {
 	font-family: "dyno_sans";
 	background-color:#404040;
+	padding: 0;
+	margin: 0;
 }
 
 body {
@@ -98,7 +98,7 @@ section{
 	width: 100%;
 	margin-top: 20px;
 	font-size: 20px;
-	color: #e81c1c;
+	color: white;
 }
 
 .form_group input, .form_group textarea{
@@ -127,8 +127,8 @@ button[type="submit"]:hover{
 }
 
 p {
-	font-size: 25px;
-	color: #eb6c67;
+	font-size: 20px;
+	color: #fff;
 }
 
 table {
@@ -138,3 +138,10 @@ table {
 td{
 	text-align: center;
 }
+
+.adhrent {
+	max-width: 500px;
+	margin: 0 auto;
+	background-color: #505050;
+}
+

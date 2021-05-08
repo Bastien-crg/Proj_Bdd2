@@ -19,7 +19,6 @@
     <div class="cube">
      		<?php
 				include("connexion.inc.php");
-
 				$requete="\c rdirezdu_db";
 				$result=$cnx->query($requete);
 				$requete="set search_path to projet ;";	
