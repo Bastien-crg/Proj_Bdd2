@@ -23,7 +23,7 @@
             $result=$cnx->query($requete);
             while($ligne = $result->fetch()){
                 echo "<div class='profil'>";
-                echo $ligne["pseudoadherent"]."  ".$ligne["mailadherent"]."  ".$ligne["teladherent"];
+                echo "Pseudo: ".$ligne["pseudoadherent"]." <br> Mail: ".$ligne["mailadherent"]." <br> Tel: ".$ligne["teladherent"];
                 echo "</div>";
             }
             echo "<br>";
