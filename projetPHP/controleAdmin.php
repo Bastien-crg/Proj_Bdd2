@@ -56,12 +56,6 @@
 
 
 
-
-
-
-
-
-
         $requete="select nummachine,etats_machine from machines order by nummachine;"; 
         $result=$cnx->query($requete);
         ?>
@@ -119,13 +113,6 @@
             <button type="submit" name="OK" value="OK">change</button></form>
           </div>
           <?php
-
-
-
-
-
-
-
 
 
 
