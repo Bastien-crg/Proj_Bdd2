@@ -16,7 +16,7 @@
      if (isset($_SESSION['password']) && isset($_SESSION['login'])){
 		echo'<section>
 		<div class="container">
-		<p> Si vous avez un probleme n\'hésité pas à nous envoyer un mail</p>
+		<p> Si vous avez un problèsme n\'hésité pas à nous envoyer un mail</p>
 			<form action="mailto:bcorgnac@etud.u-pem.fr" method="POST">
 
 				<div class="form_group">
@@ -37,6 +37,7 @@
 	} else {
 		echo'<section>
 		<div class="container">
+		<p> Si vous avez un problème n\'hésité pas à nous envoyer un mail</p>
 			<form action="mailto:#" method="POST">
 
 				<div class="form_group">

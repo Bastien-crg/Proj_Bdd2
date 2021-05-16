@@ -8,7 +8,7 @@
 
 		echo $_GET["nummachine"];
 		echo $_GET["fonctionnement"];
-
+		
 		if (isset($_GET["nummachine"]) && isset($_GET["fonctionnement"])) {
 
 			function maj($arg1, $arg2){
@@ -19,8 +19,11 @@
 				$result=$cnx->query($requete);
 				if ($_GET["fonctionnement"] == "En service") {
 					$requete="update machines set etats_machine = 'E.S' where nummachine = ".$arg1.";";
+					
 				} else {
-					$requete="update machines set etats_machine = 'H.S' where nummachine = ".$arg2.";";
+					echo("zozoooooooooooooooooooooo");
+					$requete="update machines set etats_machine = 'H.S' where nummachine = ".$arg1.";";
+					
 				}
 				$result=$cnx->query($requete);
 			}

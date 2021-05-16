@@ -9,7 +9,9 @@
 <body>
     <?php
 
-        if (isset($_POST["email"]) && isset($_POST["pseudo"]) && isset($_POST["mdp"]) && isset($_POST["adresse"]) && isset($_POST["tel"]) && isset($_POST["nom"]) && isset($_POST["prenom"])) {
+        if (!empty($_POST["email"]) && !empty($_POST["pseudo"]) && !empty($_POST["mdp"]) && !empty($_POST["adresse"]) && !empty($_POST["tel"]) && !empty($_POST["nom"]) && !empty($_POST["prenom"])) {
+
+            
             include("connexion.inc.php");
 
             $requete="\c rdirezdu_db";
@@ -43,6 +45,7 @@
         
         
     }
+    header('location: https://etudiant.u-pem.fr/~bcorgnac/projetPHP/formulaire.php');
 
     ?>
 

@@ -18,7 +18,7 @@
         $result=$cnx->query($requete);
         ?>
         <br>
-        <h2> Horaires employés </h2><br><br>
+        <h2> Horaires des employés </h2><br><br>
 
         <table BORDER=1 bgcolor="#e06e6e">
 
@@ -81,7 +81,7 @@
         
 
         <br><br>
-        <h2> Changer l'etat d'une machine: </h2>
+        <h2> Changer l'état d'une machine: </h2>
         <div class="container">
           
         
@@ -106,13 +106,14 @@
             <label>Fonctionnement</label>
             <select size="1" name="fonctionnement">
               <option value="En service">En service</option>
-              <option value="Hors servive">Hors servive</option><br>
+              <option value="Hors service">Hors service</option><br>
             </select>
           </div>
 
-            <button type="submit" name="OK" value="OK">change</button></form>
+            <button type="submit" name="OK" value="OK">Changer</button></form>
           </div>
           <?php
+
 
 
 
