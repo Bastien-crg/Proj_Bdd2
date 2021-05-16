@@ -21,12 +21,12 @@
             $result=$cnx->query($requete);
             $requete="select * from adhérents where mailadherent = '".$_SESSION['login']."';"; 
             $result=$cnx->query($requete);
+            echo "<div class='adherents'>";
             while($ligne = $result->fetch()){
-                echo "<div class='profil'>";
-                echo "Pseudo: ".$ligne["pseudoadherent"]." <br> Mail: ".$ligne["mailadherent"]." <br> Tel: ".$ligne["teladherent"];
-                echo "</div>";
+                echo $ligne["pseudoadherent"]."  ".$ligne["mailadherent"]."  ".$ligne["teladherent"];
+
             }
-            echo "<br>";
+            echo "</div>";
 
 		echo '
 

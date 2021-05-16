@@ -3,7 +3,7 @@
 }
 
 html {
-	font-family: "https://kinsta.com/fr/blog/meilleures-polices-google-fonts/#1-roboto";
+	font-family: "dyno_sans";
 	background-color:#404040;
 	padding: 0;
 	margin: 0;
@@ -71,8 +71,8 @@ header {
 	flex-basis: 0;
 	background-color: #e06e6e;
 	margin: 10px;
+	height: 60px;
 	text-align: center;
-	font-size: 28px;
 
 }
 
@@ -98,6 +98,7 @@ section{
 	box-shadow: 0px 0px 20px #00000010;
 	background-color: #505050;
 	border-radius: 8px;
+	margin-bottom: 20px;
 }
 
 .form_group {
@@ -152,14 +153,4 @@ td{
 
 label {
 	color: #e06e6e;
-}
-
-.profil {
-	width: 90%;
-	max-width: 500px;
-	margin: 0 auto;
-	background-color: #e06e6e;
-	text-align: center;
-	border-radius: 8px;
-	font-size: 28px;
 }

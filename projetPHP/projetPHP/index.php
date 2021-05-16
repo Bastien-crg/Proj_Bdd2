@@ -32,7 +32,7 @@
 				while($ligne = $result->fetch()){
 					echo "<div class='game'>";
 					echo ($ligne['nomjeu']."<br>");
-					echo '<img class="fit-picture" src="'.$ligne['image'].'" width="300px"><br>';
+					echo '<img class="fit-picture" src="'.$ligne['image'].'" width="300px""><br>';
 					echo "</div>";
 				}
 		?>
