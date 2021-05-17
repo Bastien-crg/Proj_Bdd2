@@ -15,8 +15,11 @@
 
 
         include("connexion.inc.php");
+
+            //permet de pouvoir ce connecter peu importe la base de donné mise dans connexion.inc.php
             $requete="\c rdirezdu_db";
             $result=$cnx->query($requete);
+
             $requete="set search_path to projet ;"; 
             $result=$cnx->query($requete);
             $requete="select * from adhérents where mailadherent = '".$_SESSION['login']."';"; 
@@ -86,7 +89,7 @@
 
 		';	
 
-
+        // permet de mettre à jour n'importe quelle champ du compte
         function majCompte($arg1, $arg2){
 
             include("connexion.inc.php");
@@ -94,11 +97,14 @@
             $result=$cnx->query($requete);
             $requete="set search_path to projet ;"; 
             $result=$cnx->query($requete);
+
+            // récupération du numclient du compte
             $requete2="select numclient from adhérents where mailadherent = '".$_SESSION['login']."' ;"; 
             $result2=$cnx->query($requete2);
 
             while($ligne = $result2->fetch()){
 
+                //mise à jour du compte
                 $requete = "update adhérents
                     set ".$arg2." = '".$arg1."'
                     where numclient = ".$ligne["numclient"].";";    
@@ -108,7 +114,7 @@
         }
 
         
-
+        // appelle de la fonction ci dessus
         if (isset($_POST["pseudo"])||isset($_POST["mail"])||isset($_POST["mdp"])||isset($_POST["tel"])) {
             if (isset($_POST["pseudo"])) {
                 majCompte($_POST["pseudo"],'pseudoadherent');
@@ -127,7 +133,7 @@
                 }
             }
 
-            header('location: https://etudiant.u-pem.fr/~bcorgnac/projetPHP/config_compte.php');
+            header('location: config_compte.php');
 
         }
 

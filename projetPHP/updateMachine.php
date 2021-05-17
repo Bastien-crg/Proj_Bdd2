@@ -11,7 +11,8 @@
 		
 		if (isset($_GET["nummachine"]) && isset($_GET["fonctionnement"])) {
 
-			function maj($arg1, $arg2){
+			//la fonction chage l'état de la machine de numéro $arg1, en fonction du fonctionnement donné
+			function maj($arg1){
 				include("connexion.inc.php");
 				$requete="\c rdirezdu_db";
 				$result=$cnx->query($requete);
@@ -21,7 +22,6 @@
 					$requete="update machines set etats_machine = 'E.S' where nummachine = ".$arg1.";";
 					
 				} else {
-					echo("zozoooooooooooooooooooooo");
 					$requete="update machines set etats_machine = 'H.S' where nummachine = ".$arg1.";";
 					
 				}
@@ -29,10 +29,10 @@
 			}
 
 
-			maj($_GET["nummachine"],$_GET["fonctionnement"]);
+			maj($_GET["nummachine"]);
 
 		}
-		header('location: https://etudiant.u-pem.fr/~bcorgnac/projetPHP/controleAdmin.php');
+		header('location: controleAdmin.php');
 
 	?>
 

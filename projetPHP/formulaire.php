@@ -31,7 +31,7 @@
 
     <br>
     <p>Si vous ne possédez pas de compte</p>
-
+    <!-- inscription -->
     <div class="container">
         <form class="formulaire" method="POST" action="inscription.php">
             <div class="form_group">

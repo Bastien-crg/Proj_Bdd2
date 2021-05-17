@@ -23,12 +23,16 @@
 				$result=$cnx->query($requete);
 				$requete="set search_path to projet ;";	
 				$result=$cnx->query($requete);
+
+				//recupere le nom du jeu et le nom de l'image correspondante
 				$requete="select nomjeu , image from jeux where jeux.numjeu in (
 					select numjeu as nb from parties group by numjeu
 					order by nb desc
 		 			limit 3);";
 				$result=$cnx->query($requete);
 
+
+				//affichage des images de la requête ci dessus
 				while($ligne = $result->fetch()){
 					echo "<div class='game'>";
 					echo ($ligne['nomjeu']."<br>");

@@ -26,6 +26,7 @@
           
         <?php
 
+        //affichage du tableau des employés
         echo "<tr>\n";
         echo "<td>Nom</td>";
         echo "<td>Prénom</td>";
@@ -49,42 +50,43 @@
         ?>
 
         </table>
+        <br><br>
 
-        <?php
-        echo "<br><br>";
-
-
+        
 
 
-        $requete="select nummachine,etats_machine from machines order by nummachine;"; 
-        $result=$cnx->query($requete);
-        ?>
         <h2>État des machines</h2>
 
-          <table BORDER=1 bgcolor="#e06e6e">
+        <!-- affichage de la liste des machien et leur état -->
+        <table BORDER=1 bgcolor="#e06e6e">
           
-       <?php
+          <?php
 
-        echo "<tr>\n";
-        echo "<td>Numéro de machine</td>";
-        echo "<td>État</td>";
-        echo "</tr>\n";
+          $requete="select nummachine,etats_machine from machines order by nummachine;"; 
+          $result=$cnx->query($requete);
 
-        while($ligne = $result->fetch()){
           echo "<tr>\n";
-          echo "<td>".$ligne['nummachine']."</td>";
-          echo "<td>".$ligne['etats_machine']."</td>";
+          echo "<td>Numéro de machine</td>";
+          echo "<td>État</td>";
           echo "</tr>\n";
-        }
-        ?>
-      </table>
+
+          while($ligne = $result->fetch()){
+            echo "<tr>\n";
+            echo "<td>".$ligne['nummachine']."</td>";
+            echo "<td>".$ligne['etats_machine']."</td>";
+            echo "</tr>\n";
+          }
+          ?>
+        </table>
         
 
         <br><br>
         <h2> Changer l'état d'une machine: </h2>
         <div class="container">
           
-        
+
+
+        <!-- formulaire pour mettre à jour les machine -->
         <form name="saisie" method="GET" action="updateMachine.php">
           <div class="form_group">
               Entrez un numéro de machine : 
@@ -100,9 +102,10 @@
           echo '<option value='.$ligne['nummachine'].'>'.$ligne['nummachine'].'</option>';
         }
         ?>
+
             </select> 
-            </div>
-            <div class="form_group">          
+          </div>
+          <div class="form_group">          
             <label>Fonctionnement</label>
             <select size="1" name="fonctionnement">
               <option value="En service">En service</option>
@@ -110,17 +113,17 @@
             </select>
           </div>
 
-            <button type="submit" name="OK" value="OK">Changer</button></form>
+          <button type="submit" name="OK" value="OK">Changer</button></form>
           </div>
-          <?php
 
 
 
+
+        <?php
 
         echo "<br><br>";
 
-        echo "
-          <h2> Voici les membres fidèles:</h2>";
+        echo "<h2> Voici les membres fidèles:</h2>";
 
 
 
@@ -128,7 +131,7 @@
         $result=$cnx->query($requete);
 
         $var = 0;
-
+        //affichages des clients les plus fidèles via la requete
         while($ligne = $result->fetch()){
           $var ++;
           echo '

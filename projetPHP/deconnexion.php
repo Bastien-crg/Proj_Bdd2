@@ -6,9 +6,11 @@
 	<title></title>
 </head>
 <body>
+
 	<?php
+		//détruit la session
 		session_destroy();
-		header('location: https://etudiant.u-pem.fr/~bcorgnac/projetPHP/index.php');
+		header('location: index.php');
 
 	?>
 
